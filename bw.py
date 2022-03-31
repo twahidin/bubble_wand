@@ -161,6 +161,7 @@ def main():
         #print(receiver)
      
         # sending message using telegram client
+        print("send_message to user")
         client.send_message(stu_class, message)
 
     except Exception as e:

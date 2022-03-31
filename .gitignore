@@ -1,0 +1,7 @@
+.env
+.csv
+.sav
+venv.*
+Student App.*
+bw_proto.*
+.toml

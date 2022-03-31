@@ -9,8 +9,6 @@ from telethon import TelegramClient, sync, events
 import asyncio
 
 
-load_dotenv()
-
 # get your api_id, api_hash, token
 # from telegram as described above
 #api_id = os.getenv('API_ID')

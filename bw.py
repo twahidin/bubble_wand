@@ -17,7 +17,7 @@ import asyncio
 api_id = st.secrets['API_ID']
 api_hash = st.secrets['API_HASH']
 bot_token = st.secrets['BOT_TOKEN']
-message = "Connection to Bubble Wand is successful!"
+message = "Connection to Reach Out is successful!"
 user_id = ''
 user_hash = 0
 greet_flag = False
@@ -52,10 +52,10 @@ def get_part_of_day(h):
 part = get_part_of_day(int(now.hour))
 #st.write(f"hour {now.hour} is {part}")
 
-st.markdown(f'<h1 style="color:#000FFF;font-size:48px;">{"💬Welcome to Bubble Wand!💬"}</h1>', unsafe_allow_html=True)
+st.markdown(f'<h1 style="color:#000FFF;font-size:48px;">{"Reach Out 👋"}</h1>', unsafe_allow_html=True)
 
 def main():
-    message = "Connection to Bubble Wand is successful!"
+    message = "Connection to Reach Out is successful!"
     user_id = ''
     send_message = False
     placeholder1 = st.empty()
@@ -69,8 +69,8 @@ def main():
         
         placeholder1.header(f"Good {part} {stu_name}, wishing you a bubbly day!")
         st.balloons()
-        time.sleep(4)
-        placeholder1.header(f"Dear {stu_name}, please key in the teacher's code")
+        time.sleep(3)
+        placeholder1.header(f"Dear {stu_name}, please key in your teacher's code")
         placeholder2.empty()
 
 
@@ -97,26 +97,32 @@ def main():
     if col1.button("YES " + thumbs_up):
         message = f"{stu_name} replied YES " + thumbs_up
         placeholder4.subheader(f"Hey {stu_name}, you answered Yes! 👍 Awesome!")
+        time.sleep(2)
     col1.markdown('#') 
     if col2.button("NO " + thumbs_down):
         message = f"{stu_name} replied NO " + thumbs_down
         placeholder4.subheader(f"Hey {stu_name}, you answered No! 👎 No problem!")
+        time.sleep(2)
     col2.markdown('#') 
     if col1.button("HELP ME " + wave):
         message = f"{stu_name} is asking for help! " + wave
         placeholder4.subheader(f"Dear {stu_name}, don't worry, help is coming!")
+        time.sleep(2)
     col1.markdown('#') 
     if col2.button("DON'T KNOW " + hmmm):
         message = f"{stu_name} does not know " + hmmm
         placeholder4.subheader(f"Dear {stu_name}, don't worry, we will figure it out!")
+        time.sleep(2)
     col2.markdown('#') 
     if col1.button("CHEERFUL " + happy_emoji):
         message = f"{stu_name} is feeling happy " + happy_emoji
         placeholder4.subheader(f"Hey {stu_name}, I am glad that you are feeling happy! 😃")
+        time.sleep(2)
     col1.markdown('#') 
     if col2.button("UPSET " + sad_emoji):
         message = f"{stu_name} is feeling sad " + sad_emoji
         placeholder4.subheader(f"Dear {stu_name}, it's ok to feel unhappy, take care")
+        time.sleep(2)
 
     st.text(f"Teacher's Code: {stu_class}")    
 
